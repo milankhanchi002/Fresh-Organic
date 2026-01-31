@@ -1,0 +1,286 @@
+.about-us-page {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  opacity: 0.95;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.story-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.story-content h2 {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+}
+
+.story-content p {
+  font-size: 1.1rem;
+  color: #495057;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.story-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.values-section {
+  padding: 4rem 0;
+  background: white;
+}
+
+.values-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 3rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.value-card {
+  text-align: center;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.value-icon {
+  font-size: 3rem;
+  color: #667eea;
+  margin-bottom: 1rem;
+}
+
+.value-card h3 {
+  font-size: 1.3rem;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.value-card p {
+  color: #495057;
+  line-height: 1.6;
+}
+
+.stats-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #495057 0%, #343a40 100%);
+  color: white;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffd700;
+  margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+  font-size: 1.1rem;
+  color: #f8f9fa;
+}
+
+.team-section {
+  padding: 4rem 0;
+  background: white;
+}
+
+.team-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 3rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.team-member {
+  text-align: center;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 4px solid #667eea;
+}
+
+.team-member h3 {
+  font-size: 1.3rem;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.team-member p {
+  color: #495057;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .story-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .story-content h2,
+  .values-section h2,
+  .team-section h2 {
+    font-size: 2rem;
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .story-image img {
+    height: 300px;
+  }
+  
+  .value-card,
+  .team-member {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 4rem 0;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+  }
+  
+  .story-content h2,
+  .values-section h2,
+  .team-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .story-content p {
+    font-size: 1rem;
+  }
+  
+  .stat-item h3 {
+    font-size: 2.5rem;
+  }
+  
+  .stat-item p {
+    font-size: 1rem;
+  }
+  
+  .team-member img {
+    width: 120px;
+    height: 120px;
+  }
+} 

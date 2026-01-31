@@ -1,0 +1,258 @@
+.image-slider-container {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  position: relative;
+  height: 500px;
+}
+
+.slide-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.slide-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-content {
+  text-align: center;
+  color: white;
+  max-width: 600px;
+  padding: 2rem;
+  animation: slideIn 1s ease-out;
+}
+
+.slide-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.slide-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.slide-cta {
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  color: #333;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+  animation: fadeInUp 1s ease-out 0.9s both;
+}
+
+.slide-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+  background: linear-gradient(135deg, #ffed4e 0%, #ffd700 100%);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom slick slider styles */
+.slick-dots {
+  bottom: 20px;
+  z-index: 10;
+}
+
+.slick-dots li button:before {
+  color: white;
+  font-size: 12px;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ffd700;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s ease;
+}
+
+.slick-prev {
+  left: 30px;
+}
+
+.slick-next {
+  right: 30px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 50px;
+  color: white;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  opacity: 1;
+  color: #ffd700;
+  transform: scale(1.1);
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .image-slider-container {
+    height: 450px;
+  }
+  
+  .slide {
+    height: 450px;
+  }
+  
+  .slide-title {
+    font-size: 2.5rem;
+  }
+  
+  .slide-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .slick-prev {
+    left: 20px;
+  }
+  
+  .slick-next {
+    right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-slider-container {
+    height: 400px;
+  }
+  
+  .slide {
+    height: 400px;
+  }
+  
+  .slide-title {
+    font-size: 2rem;
+  }
+  
+  .slide-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .slide-cta {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .slide-content {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+  
+  .slick-prev,
+  .slick-next {
+    display: none !important;
+  }
+  
+  .slick-dots {
+    bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-slider-container {
+    height: 350px;
+  }
+  
+  .slide {
+    height: 350px;
+  }
+  
+  .slide-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .slide-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .slide-cta {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .slide-content {
+    padding: 1rem;
+  }
+  
+  .slick-dots {
+    bottom: 10px;
+  }
+  
+  .slick-dots li button:before {
+    font-size: 10px;
+  }
+} 
